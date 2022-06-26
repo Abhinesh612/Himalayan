@@ -10,6 +10,9 @@ import { FaBars,
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const navMobileSat = () => setNav(!nav);
+    // ------------------------------------
+    const checkId = document.getElementById("home-spot");
+	console.log(checkId);	
     return (
         <div className='z-20 fixed top-0 h-[80px] w-full flex justify-between items-center bg-[#5CDB95] text-[#EDF5E1] shadow-xl'>
             <div className='ml-4 bg-[#05386B] px-4 py-3 rounded-md'>
@@ -39,10 +42,10 @@ const Navbar = () => {
                 nav? 'absolute top-0 right-0 bg-[#5CDB95] flex flex-col justify-center items-center w-full h-screen shadow-xl' : 'hidden' 
             }>
                 <ul>
-                    <li><Link to='home' smooth={true} duration={500} onClick={navMobileSat}>Home</Link></li>
-                    <li><Link to='about' smooth={true} duration={500} onClick={navMobileSat}>About</Link></li>
-                    <li><Link to='posts' smooth={true} duration={500} onClick={navMobileSat} offset={-100}>Posts</Link></li>
-                    <li><Link to='contacts' smooth={true} duration={500} onClick={navMobileSat}>Contacts</Link></li>
+                    <li className='py-4'><Link to='home' smooth={true} duration={500} onClick={navMobileSat}>Home</Link></li>
+                    <li className='py-4'><Link to='about' smooth={true} duration={500} onClick={navMobileSat}>About</Link></li>
+                    <li className='py-4'><Link to='posts' smooth={true} duration={500} onClick={navMobileSat} offset={-100}>Posts</Link></li>
+                    <li className='py-4'><Link to='contacts' smooth={true} duration={500} onClick={navMobileSat}>Contacts</Link></li>
                 </ul>
             </div>
 

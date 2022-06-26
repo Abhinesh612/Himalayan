@@ -1,19 +1,22 @@
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Posts from './components/Posts';
-import Contacts from './components/Contacts';
+import HomePage from './components/HomePage';
+import WebScraping from './PostPage/WebScraping';
+import {
+  Routes,
+  Route
+} from "react-router-dom";
 import './App.css';
+
+
 
 function App() {
   return (
+
     <div>
-      <Navbar />
-      <Home />
-      <About />
-      <Posts />
-      <Contacts />
+      <Routes>
+        <Route exact path='/' element={<HomePage />}></Route>
+      </Routes>
     </div>
+
   );
 }
 
