@@ -1,5 +1,4 @@
 import HomePage from './components/HomePage';
-import WebScraping from './PostPage/WebScraping';
 import {
   Routes,
   Route
